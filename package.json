@@ -33,12 +33,15 @@
     "gulp-util": "^3.0.6",
     "merge-stream": "^1.0.0",
     "node-uuid": "^1.4.3",
-    "react": "^0.13.3",
+    "react": "^0.14.3",
     "reactify": "^1.1.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "history": "^1.13.1",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.0",
     "reactable": "^0.12.0"
   }
 }

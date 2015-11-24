@@ -7,6 +7,10 @@ th[class^="reactable-th"] {
     @extend .button;
 }
 
+.reactable-page-button {
+    margin: 0 $spacing-unit;
+}
+
 .active {
     background: #B0D8C0;
 }

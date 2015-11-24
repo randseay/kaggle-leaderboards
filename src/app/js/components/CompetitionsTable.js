@@ -1,15 +1,16 @@
+var Link = require('react-router').Link;
 var React = require('react');
+var Route = require('react-router').Route;
+var Router = require('react-router').Router;
 var Table = require('reactable').Table;
 var Td = require('reactable').Td;
 var Th = require('reactable').Th;
 var Thead = require('reactable').Thead;
 var Tr = require('reactable').Tr;
+var unsafe = require('reactable').unsafe;
 
 var COLUMNS = [
-    {key: 'Rank', label: 'Rank'},
-    {key: 'TeamName', label: 'Team'},
-    {key: 'NumSubmissions', label: 'Submissions'},
-    {key: 'Score', label: 'Score'}
+    {key: 'CompetitionName', label: 'Competition'}
 ];
 
 var Leaderboard = React.createClass({
@@ -34,21 +35,15 @@ var Leaderboard = React.createClass({
         return (
             <Table
                 columns={COLUMNS}
-                // data={this.state.data}
                 sortable={true}
-                noDataText='No Data Found.'
-                itemsPerPage={25}
-                pageButtonLimit={5}>
+                noDataText='No Data Found.'>
 
                 {this.state.data.map(function(row) {
                     return (
-                        <Tr key={row.Rank} className={row.TeamName == activeUser ? 'active' : ''}>
-                            <Td column="Rank">{row.Rank}</Td>
-                            <Td column="TeamName">
-                                {row.Users.length > 1 ? row.Users.map(function(user){return  ' ' + user.UserName;}) : row.TeamName}
+                        <Tr key={row.Id}>
+                            <Td column="CompetitionName">
+                                {unsafe('<a href="/leaderboard/' + row.CompetitionName + '">' + row.CompetitionName + '</a>')}
                             </Td>
-                            <Td column="NumSubmissions">{row.NumSubmissions}</Td>
-                            <Td column="Score">{row.Score}</Td>
                         </Tr>
                     )
                 })}
