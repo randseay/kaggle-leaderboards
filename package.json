@@ -1,0 +1,44 @@
+{
+  "name": "kaggle-leaderboard",
+  "version": "0.0.0",
+  "description": "A leaderboard for Kaggle Data Science Competitions",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "kaggle",
+    "leaderboard",
+    "data science",
+    "competition"
+  ],
+  "author": "Rand Seay",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "browser-sync": "^2.8.2",
+    "browserify": "^11.0.1",
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "merge-stream": "^1.0.0",
+    "node-uuid": "^1.4.3",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "reactable": "^0.12.0"
+  }
+}

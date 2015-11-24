@@ -1,0 +1,16 @@
+// Base styles
+
+body {
+    background: $brand-tertiary;
+}
+
+.container {
+    background: #fafafa;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: $spacing-unit;
+}
+
+.title {
+    color: $brand-primary;
+}

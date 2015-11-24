@@ -1,0 +1,30 @@
+{
+  "name": "kaggle-leaderboard",
+  "version": "0.0.0",
+  "authors": [
+    "Rand Seay <rand.seay@gmail.com>"
+  ],
+  "description": "A leaderboard for Kaggle Data Science Competitions",
+  "main": "app.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "kaggle",
+    "leaderboard",
+    "data science",
+    "competition"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fuselage": "~1.0.3",
+    "fontawesome": "~4.4.0"
+  }
+}
