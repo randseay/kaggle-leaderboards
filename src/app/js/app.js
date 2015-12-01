@@ -9,6 +9,7 @@ var Route = require('react-router').Route;
 var Router = require('react-router').Router;
 
 var apiBase = 'http://leaderboard-project.azurewebsites.net/api/';
+var activeUser = 'DaggerFS';
 
 var App = React.createClass({
     render: function() {
@@ -34,7 +35,7 @@ var LeaderboardHandler = React.createClass({
             <Leaderboard
                 url={apiBase + 'competition/' + this.props.params.competitionName + '/leaderboard'}
                 competitionName={this.props.params.competitionName}
-                activeUser={'DaggerFS'}/>
+                activeUser={activeUser}/>
         );
     }
 });

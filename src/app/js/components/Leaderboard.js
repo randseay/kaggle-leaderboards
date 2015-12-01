@@ -32,6 +32,30 @@ var Leaderboard = React.createClass({
             }.bind(this)
         });
     },
+    handleClick: function() {
+        var data = this.state.data;
+        var teamFound = false;
+
+        for (var i=0; i<data.length; i++) {
+            if (data[i].TeamName == this.props.activeUser) {
+                data[i].NumSubmissions++;
+                this.setState({data: data});
+                return;
+            }
+        }
+
+        if (!teamFound) {
+            data.push({
+                Rank: 12345,
+                TeamName: this.props.activeUser,
+                Users: '',
+                Score: 12345.0,
+                DateSubmitted: '2015-10-08T22:23:10',
+                NumSubmissions: 1
+            });
+            this.setState({data: data});
+        }
+    },
     render: function() {
         var activeUser = this.props.activeUser;
         return (
@@ -43,9 +67,16 @@ var Leaderboard = React.createClass({
 
                 <hr />
 
-                <Link to='/' className='button'>
+                <Link id='to-competitions' to='/' className='button'>
                     <i className='fa fa-arrow-left'></i> Back to competitions
                 </Link>
+
+                <a
+                    id='new-submission'
+                    className='button secondary small'
+                    onClick={this.handleClick}>
+                    <i className='fa fa-plus'></i> Add new submission
+                </a>
 
                 <Table
                     columns={COLUMNS}

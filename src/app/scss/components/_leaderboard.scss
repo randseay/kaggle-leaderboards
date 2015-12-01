@@ -14,3 +14,11 @@ th[class^="reactable-th"] {
 .active {
     background: #B0D8C0;
 }
+
+.button#to-competitions {
+    margin-right: $spacing-unit;
+}
+
+.button#new-submission {
+    cursor: pointer;
+}

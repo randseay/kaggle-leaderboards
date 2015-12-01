@@ -14,3 +14,7 @@ body {
 .title {
     color: $brand-primary;
 }
+
+.reactable-header-sortable:hover {
+    background: darken($gray-tint, 10%);
+}
